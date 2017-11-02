@@ -29,4 +29,9 @@ class BowlingScoreCalculatorShould {
     assertThat(calculate("X"), `is`(10))
     assertThat(calculate("X52"), `is`(24))
   }
+
+  @Test
+  fun `calculate score for spares and strikes`() {
+    assertThat(calculate("1/X1/2"), `is`(54))
+  }
 }

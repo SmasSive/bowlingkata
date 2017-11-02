@@ -12,7 +12,7 @@ fun calculate(rolls: String): Int {
 private fun bonus(rolls: String, roll: Char, index: Int): Int {
   return when (roll) {
     SPARE -> calculateScore(rolls.next(index))
-    STRIKE -> calculateScore(rolls.next(index)) + calculateScore(rolls.next(index + 1))
+    STRIKE -> calculateScore(rolls.next(index)) + calculateScore(rolls.next(index + 1)) - spareDiff(rolls, rolls.next(index + 1), index + 2)
     else -> 0
   }
 }

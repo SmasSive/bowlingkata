@@ -10,9 +10,13 @@ fun calculate(rolls: String): Int {
 }
 
 private fun bonus(rolls: String, roll: Char, index: Int): Int {
+  val nextScore = calculateScore(rolls.next(index))
   return when (roll) {
-    SPARE -> calculateScore(rolls.next(index))
-    STRIKE -> calculateScore(rolls.next(index)) + calculateScore(rolls.next(index + 1)) - spareDiff(rolls, rolls.next(index + 1), index + 2)
+    SPARE -> nextScore
+    STRIKE -> {
+      val nextButOne = rolls.next(index + 1)
+      nextScore + calculateScore(nextButOne) - spareDiff(rolls, nextButOne, index + 2)
+    }
     else -> 0
   }
 }

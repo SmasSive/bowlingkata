@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bowlingkata.iml" filepath="$PROJECT_DIR$/.idea/modules/bowlingkata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bowlingkata_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bowlingkata_main.iml" group="bowlingkata" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bowlingkata_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bowlingkata_test.iml" group="bowlingkata" />
+    </modules>
+  </component>
+</project>

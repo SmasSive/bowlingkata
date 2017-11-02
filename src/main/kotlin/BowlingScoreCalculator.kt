@@ -7,4 +7,8 @@ fun calculate(rolls: String): Int {
   return score
 }
 
-fun calculateScore(roll: Char) = String(charArrayOf(roll)).toInt()
+fun calculateScore(roll: Char) =
+    when (roll) {
+      in '1'..'9' -> String(charArrayOf(roll)).toInt()
+      else -> 0
+    }

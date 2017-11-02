@@ -38,5 +38,6 @@ class BowlingScoreCalculatorShould {
   @Test
   fun `calculate score for last frame`() {
     assertThat(calculate("1/35XXX458/X3/XX6"), `is`(189))
+    assertThat(calculate("XXXXXXXXXXXX"), `is`(300))
   }
 }

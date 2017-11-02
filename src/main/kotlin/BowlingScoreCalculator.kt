@@ -25,8 +25,7 @@ private fun bonus(rolls: String, roll: Char, index: Int): Int {
 
 private fun isLastFrame(rolls: String, index: Int): Boolean {
   return TOTAL_NUMBER_OF_FRAMES <= rolls.substring(0, index)
-      .map { roll -> if (roll == STRIKE) 2 else 1 }
-      .fold(0) { acc, roll -> acc + roll }
+      .sumBy { roll -> if (roll == STRIKE) 2 else 1 }
 }
 
 

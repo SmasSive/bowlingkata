@@ -23,4 +23,10 @@ class BowlingScoreCalculatorShould {
     assertThat(calculate("3/-"), `is`(10))
     assertThat(calculate("7/7/7/7/7/7/7/7/7/-"), `is`(146))
   }
+
+  @Test
+  fun `calculate score for strikes`() {
+    assertThat(calculate("X"), `is`(10))
+    assertThat(calculate("X52"), `is`(24))
+  }
 }
